@@ -28,16 +28,6 @@ except:
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-
-# -----------------------------
-# CONFIG
-# -----------------------------
-#st.set_page_config(page_title="Career Guidance App", layout="wide")
-#DATA_FILE = "user_data.json"
-#OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-#if OPENAI_API_KEY and openai:
-    #openai.api_key = OPENAI_API_KEY
-
 # -----------------------------
 # DOMAINS / ROLES / SKILLS
 # -----------------------------
@@ -490,3 +480,4 @@ elif st.session_state.page == "Voice Assistant":
     st.subheader("💬 Conversation")
     for speaker, text in st.session_state.va_conversation:
         st.markdown(f"**{speaker}:** {text}")
+
