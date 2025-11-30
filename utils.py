@@ -10,7 +10,7 @@ import google.generativeai as genai
 # Keys
 ASSEMBLYAI_API_KEY = st.secrets["ASSEMBLYAI_API_KEY"]
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-
+genai.configure(api_key=GEMINI_API_KEY)
 ASSEMBLYAI_HEADERS = {"authorization": ASSEMBLYAI_API_KEY}
 
 # -----------------------------
@@ -124,3 +124,4 @@ def career_ai_reply(user_text: str) -> str:
         return response.text
     except Exception as e:
         return f"(Career AI error: {e})"
+
