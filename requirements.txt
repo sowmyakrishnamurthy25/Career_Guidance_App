@@ -1,0 +1,11 @@
+streamlit
+requests
+python-dotenv
+google-generativeai
+edge-tts
+gtts
+scikit-learn
+python-docx
+speechrecognition
+pyttsx3
+openai
