@@ -112,6 +112,8 @@ DOMAINS = {
 }
 #DATA HELPERS
 # -----------------------------
+DATA_FILE = Path(__file__).parent / "data.json"
+
 def ensure_data_file():
     if not Path(DATA_FILE).exists():
         with open(DATA_FILE, "w") as f:
@@ -480,4 +482,5 @@ elif st.session_state.page == "Voice Assistant":
     st.subheader("💬 Conversation")
     for speaker, text in st.session_state.va_conversation:
         st.markdown(f"**{speaker}:** {text}")
+
 
